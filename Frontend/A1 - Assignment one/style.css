@@ -1,0 +1,237 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #f9f6f0;
+}
+
+main {
+  max-width: 1280px;
+  margin: 0px auto;
+  display: flex;
+}
+
+.header {
+  padding: 20px 0px;
+  background-color: antiquewhite;
+}
+
+.nav {
+  max-width: 1280px;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation ul {
+  display: flex;
+  gap: 20px;
+}
+
+.list {
+  list-style: none;
+}
+
+.list li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.main {
+  margin-top: 40px;
+}
+
+.left {
+  width: 60%;
+}
+
+.leaf-tag {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+h1 {
+  font-size: 90px;
+  line-height: 78px;
+  margin-top: 40px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.top {
+  display: flex;
+  gap: 20px;
+}
+
+.one {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  position: relative;
+}
+
+.cotton {
+  position: absolute;
+  bottom: 120px;
+  right: 30px;
+}
+
+.one hr {
+  width: 100px;
+  transform: rotate(90deg);
+  margin-bottom: 40px;
+}
+
+.one p {
+  writing-mode: vertical-rl;
+  font-size: 32px;
+  text-orientation: mixed;
+}
+
+.two {
+  height: 600px;
+  width: 600px;
+  background-image: url("./assests/girl-with-scarf.avif");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  border-radius: 20px;
+}
+
+.two-1 {
+  background-color: white;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.two-2 {
+  display: flex;
+  width: 180px;
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 10px;
+  gap: 10px;
+}
+
+.two-1st-div {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 20px 0px 20px;
+}
+
+.two-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  align-items: center;
+  background-color: seagreen;
+  height: 20%;
+  width: 20%;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 20px;
+  right: -10px;
+}
+
+.div-three {
+  width: 150px;
+  height: 150px;
+}
+
+.div-three img {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.main-bottom {
+  padding: 10px 20px;
+  display: flex;
+  width: 68%;
+  margin-left: 115px;
+  border: 1px solid rgba(46, 139, 86, 0.454);
+  box-shadow: #f9f6f0;
+  justify-content: space-around;
+  border-radius: 50px;
+}
+
+.bottom-child {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.bottom-child i {
+  font-size: 32px;
+}
+
+.mrl {
+  margin-left: 30px;
+  font-size: 40px;
+}
+
+.colors-child {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: pink;
+}
+
+.colors-child:nth-child(2) {
+  background: red;
+}
+.colors-child:nth-child(3) {
+  background: green;
+}
+.colors-child:nth-child(4) {
+  background: blue;
+}
+
+.colors {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.left hr {
+  margin: 20px 0px;
+  width: 15%;
+}
+
+.organic {
+  margin: 10px 0px 20px 0px;
+}
+
+h3 {
+  margin-bottom: 20px;
+}
+
+.extra {
+  display: flex;
+  margin-top: 30px;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+h4 {
+  font-size: 30px;
+}
