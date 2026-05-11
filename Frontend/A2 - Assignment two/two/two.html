@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insect Classification UI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="nav-left">
+        <div class="logo">INSECT</div>
+        <div class="search-container">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Search..." />
+        </div>
+      </div>
+      <nav class="nav-right">
+        <a href="#">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">About</a>
+        <a href="#">Gallery</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+
+    <main class="split-layout">
+      <section class="panel panel-left">
+        <h2 class="vertical-title">Classification</h2>
+
+        <ul class="taxonomy-list">
+          <li>
+            <span class="bullet"></span>
+            <div class="taxonomy-info">
+              <strong>Class:</strong>
+              <p>Insecta</p>
+            </div>
+          </li>
+          <li>
+            <span class="bullet"></span>
+            <div class="taxonomy-info">
+              <strong>Order:</strong>
+              <p>Coleoptera</p>
+            </div>
+          </li>
+          <li>
+            <span class="bullet"></span>
+            <div class="taxonomy-info">
+              <strong>Family:</strong>
+              <p>Cerambycidae</p>
+            </div>
+          </li>
+          <li>
+            <span class="bullet"></span>
+            <div class="taxonomy-info">
+              <strong>Sub-Family:</strong>
+              <p>Cerambycinae</p>
+            </div>
+          </li>
+          <li>
+            <span class="bullet"></span>
+            <div class="taxonomy-info">
+              <strong>Tribe:</strong>
+              <p>Callichromatini</p>
+            </div>
+          </li>
+          <li>
+            <span class="bullet"></span>
+            <div class="taxonomy-info">
+              <strong>Genus:</strong>
+              <p>Pachyteria</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <div class="center-showcase">
+        <div class="glass-dome">
+          <img src="./assests/pachyteria.png" alt="Pachyteria equestris" />
+        </div>
+        <div class="gold-base">
+          <div class="gold-base-top"></div>
+          <div class="gold-base-bottom"></div>
+        </div>
+      </div>
+
+      <section class="panel panel-right">
+        <div class="product-info">
+          <h1 class="product-title">Pachyteria<br />equestris</h1>
+
+          <div class="stats-container">
+            <div class="large-icon">
+              <i class="fa-solid fa-bug"></i>
+              <p>32 mm</p>
+            </div>
+            <div class="vertical-divider"></div>
+            <div class="stats-details">
+              <div class="stat-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                  <span class="label">Locality:</span>
+                  <span class="value">Malaysia</span>
+                </div>
+              </div>
+              <div class="stat-item">
+                <i class="fa-solid fa-mars"></i>
+                <div>
+                  <span class="label">Sex:</span>
+                  <span class="value">Male</span>
+                </div>
+              </div>
+              <div class="stat-item">
+                <i class="fa-solid fa-ruler"></i>
+                <div>
+                  <span class="label">Size:</span>
+                  <span class="value">32 mm / 12 mm</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="price">$5.99</div>
+
+          <div class="toggle-group">
+            <div class="toggle-row">
+              <label class="switch">
+                <input type="checkbox" checked />
+                <span class="slider"></span>
+              </label>
+              <span>View detailed antennae</span>
+            </div>
+            <div class="toggle-row">
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider"></span>
+              </label>
+              <span>View underside</span>
+            </div>
+          </div>
+
+          <button class="add-btn">Add to collection</button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
