@@ -1,0 +1,405 @@
+:root {
+  --bg-color: #fafafa;
+  --text-dark: #0a0a0a;
+  --c-yellow: #fadd56;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-dark);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* ========== NAVBAR ========== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 5%;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 1.4rem;
+}
+
+.cart-icon {
+  background: var(--text-dark);
+  color: white;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+/* ========== HERO SECTION ========== */
+.hero {
+  text-align: center;
+  margin: 0;
+  position: relative;
+  padding: 0 5%;
+}
+
+/* Fluid Typography for responsiveness */
+.hero h1 {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+}
+
+.floating-emoji {
+  position: absolute;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  top: -60px;
+}
+
+.top-left-emoji {
+  top: 0;
+  left: 5%;
+}
+.top-right-emoji {
+  top: 20%;
+  right: 5%;
+}
+
+/* ========== MAIN LAYOUT ========== */
+.main-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 2rem 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.side-content {
+  position: absolute;
+  z-index: 10;
+}
+
+.side-left {
+  left: 5%;
+  top: 0%;
+}
+.side-right {
+  right: 5%;
+  top: 0%;
+}
+
+.subtitle {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.side-left h2 {
+  font-size: clamp(1.2rem, 2vw, 1.4rem);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* ========== THE ACCURATE STAGGERED GRID ========== */
+.center-main {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  /* 12 rows allow us to stagger the heights perfectly like the image */
+  grid-template-rows: repeat(12, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 1280px;
+  height: clamp(500px, 65vh, 700px);
+}
+
+.grid-item {
+  border-radius: 24px;
+  background-size: cover;
+  background-position: center top;
+  background-color: #eee; /* fallback */
+  position: relative;
+}
+
+/* Explicit positioning creates the staggered masonry effect */
+.left {
+  grid-column: 1;
+  grid-row: 4 / 10;
+}
+.top-left {
+  grid-column: 2;
+  grid-row: 2 / 6;
+}
+.bottom-left {
+  grid-column: 2;
+  grid-row: 6 / 12;
+}
+.center {
+  grid-column: 3;
+  grid-row: 1 / 13;
+  background-color: var(--c-yellow);
+}
+.top-right {
+  grid-column: 4;
+  grid-row: 2 / 8;
+}
+.bottom-right {
+  grid-column: 4;
+  grid-row: 8 / 12;
+}
+.right {
+  grid-column: 5;
+  grid-row: 5 / 10;
+  overflow: visible;
+}
+
+.star-decorator {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.hashtag {
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+/* Circular Text Animation */
+.circular-text-wrapper {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circular-text-wrapper svg {
+  position: absolute;
+  animation: rotateText 10s linear infinite;
+}
+
+.play-btn {
+  width: 30px;
+  height: 30px;
+  background: var(--text-dark);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+@keyframes rotateText {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ========== FOOTER ========== */
+.bottom-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.quote-area p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.signature {
+  font-family: "Caveat", cursive;
+  font-size: 3rem;
+  transform: rotate(-3deg);
+  position: relative;
+  display: inline-block;
+}
+
+.signature::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--c-yellow);
+  z-index: -1;
+}
+
+.flower-bottom {
+  top: 280px;
+  left: 350px;
+}
+
+.scroll-down {
+  background: white;
+  border: 1px solid #eaeaea;
+  padding: 1rem 2rem;
+  border-radius: 40px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+.blog-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  position: relative;
+}
+
+.blog-title {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.blog-title .number {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 300;
+  line-height: 1;
+}
+
+.blog-title h3 {
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  font-weight: 700;
+}
+
+.arrow-btn {
+  background: var(--text-dark);
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+/* ========== RESPONSIVE MEDIA QUERIES ========== */
+
+/* Tablets and Small Laptops */
+@media (max-width: 1100px) {
+  .main-wrapper {
+    flex-direction: column;
+    gap: 3rem;
+    padding-top: 2rem;
+  }
+
+  .side-content {
+    position: relative;
+    inset: auto;
+    text-align: center;
+  }
+
+  .bottom-section {
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .flower-bottom {
+    right: 0;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide standard nav on mobile */
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  /* Convert Masonry Grid to simple stacking grid for small screens */
+  .center-main {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    height: auto;
+    gap: 15px;
+  }
+
+  .grid-item {
+    grid-column: span 1 !important;
+    grid-row: auto !important;
+    min-height: 250px;
+  }
+
+  /* Make the center hero image span full width on mobile */
+  .center {
+    grid-column: 1 / -1 !important;
+    min-height: 400px;
+    order: -1; /* Push to top */
+  }
+}
+
+@media (max-width: 480px) {
+  .center-main {
+    grid-template-columns: 1fr; /* 1 Column on very small phones */
+  }
+
+  .blog-title {
+    flex-direction: column;
+    text-align: center;
+  }
+}
